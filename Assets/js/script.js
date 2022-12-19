@@ -1,103 +1,57 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+const Questions = [{
+  id: 0,
+  q: "What is JavaScript?",
+  a: [{ text: "JavaScript is a scripting language used to make the website interactive", isCorrect: true },
+      { text: "JavaScript is an assembly language used to make the website interactive", isCorrect: false },
+      { text: "JavaScript is a compiled language used to make the website interactive", isCorrect: false },
+      { text: "None of the mentioned", isCorrect: false }
+  ],
+  e: "JavaScript is a scripting language used along with HTML and CSS to make the website interactive along. It is used both on the client-side and server-side."
+},
+{
+  id: 1,
+  q: "Arrays in JavaScript are defined by which of the following statements?",
+  a: [{ text: "It is an ordered list of values", isCorrect: true},
+      { text: "It is an ordered list of objects", isCorrect: false },
+      { text: "It is an ordered list of string", isCorrect: false },
+      { text: "It is an ordered list of functions", isCorrect: false }
+  ],
+  e: "An array in JavaScript is an ordered list of values, each value is referred to as an element, and it is identified by an index. An array can include values of many sorts and the length of an array dynamically sized."
 
-// Write password to the #password input
-function writePassword() {
-  //debugger;
-  // commented below line due to an error stating password was not declared or defined
-  //var password = generatePassword();
-  var passwordText = document.querySelector("#pwactual");
+},
+{
+  id: 2,
+  q: "Which of the following is correct about JavaScript?",
+  a: [{ text: "JavaScript is Assembly-language", isCorrect: false },
+      { text: "JavaScript is an Object-Oriented language", isCorrect: false },
+      { text: "JavaScript is an Object-Based language", isCorrect: true },
+      { text: "JavaScript is a High-level language", isCorrect: false }
+  ],
+  e: "Although JavaScript is not an OOP (Object-Oriented Programming) language like Java or PHP, it is object based language. The standard threesome of polymorphism, encapsulation, and inheritance are the criteria for object orientation, and JavaScript fails to meet them."
 
-  // setting variables containing associated values
-  // i.e. upper/lower case alphabets, numeric values & special characters
-  var lower = "abcdefghijklmnopqrstuvwxyz";
-  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numeric = "0123456789";
-  var specialchar = "!@#$%^&*()";
+},
 
-  // variable for pw length value
-  var pwlength;
+{
+  id: 3,
+  q: "Which of the following scoping type does JavaScript use?",
+  a: [{ text: "Sequential", isCorrect: false },
+      { text: "Segmental", isCorrect: false },
+      { text: "Lexical", isCorrect: true },
+      { text: "Literal", isCorrect: false }
+  ],
+  e: "JavaScript, like most current programming languages, employs lexical scoping. This means that functions are performed with the variable scope in effect when they were defined, rather than the variable scope in effect when they are invoked."
 
-  // variable for selected pw values
-  // to be set after each confirm()
-  var pwvalues;
+},
 
-  // variable for final randomized pw
-  let pwactual = "";
-
-// prompt for pw length
-//logic to validate entered value
-    pwlength = parseInt(prompt(
-      "Choose password length." + "\n" +
-      "(Minimum character requirements: 8-128)"
-      ));
-      
-  if (pwlength < 8 || pwlength > 128) {
-    alert(
-      "Choose a valid value between 8-128."
-    );
-    return
-  };
-  
-  // prompt for upper case
-  var pwrequpper = confirm(
-    "Require UPPER case characters?" + "\n" +
-    "(Ok = Yes, Cancel = No)"
-  );
-  
-  // IF prompt for upper case confirm() = YES, then append values from var upper.  
-  if (pwrequpper) {
-    pwvalues = upper
-  };
-
-  // prompt for lower case
-  var pwreqlower = confirm(
-    "Require lower case characters?" + "\n" +
-    "(Ok = Yes, Cancel = No)"
-  );
-
-  // IF prompt for lower case confirm() = YES, then append values from var lower.  
-  if (pwreqlower) {
-    pwvalues = pwvalues + lower
-  };
-
-  // prompt for numbers
-  var pwreqnumbers = confirm(
-    "Require numeric values?" + "\n" +
-    "(Ok = Yes, Cancel = No)"
-  );
-
-  // IF prompt for numeric values confirm() = YES, then append values from var numeric.  
-  if (pwreqnumbers) {
-    pwvalues = pwvalues + numeric
-  };
-
-  // prompt for special characters
-  var pwreqspecial = confirm(
-    "Require special characters?" + "\n" +
-    "(Ok = Yes, Cancel = No)"
-  );
-
-  // IF prompt for special characters confirm() = YES, then append values from var specialchar.  
-  if (pwreqspecial) {
-    pwvalues = pwvalues + specialchar
-  };
-
-  // pw generating code block
-  //const random = (length = 8) => {
-    while (pwlength > 0) {
-      pwactual = pwactual + pwvalues.charAt(Math.floor(Math.random() * pwvalues.length));
-    pwlength--;
-    };
-    //return pwactual;
-//};
-
-  
-
-  passwordText.value = pwactual;
-
+{
+  id: 4,
+  q: "Which of the following is NOT an error in JavaScript?",
+  a: [{ text: "Missing of Bracket", isCorrect: false },
+      { text: "Division by zero", isCorrect: true },
+      { text: "Syntax error", isCorrect: false },
+      { text: "Missing of semicolons", isCorrect: false }
+  ],
+  e:"In JavaScript, division by zero does not result in an error; it just returns infinity or negative infinity. However, because zero divided by zero has no well-defined value, the result of this operation is the unusual not-a-number value, which is written as NaN."
 
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+]

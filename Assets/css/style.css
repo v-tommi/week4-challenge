@@ -1,16 +1,18 @@
-
-
-
-
-
-
 .navlinks {
   display: flex;
   justify-content: space-between;
 }
 
-#q1 {
+
+.container {
   display: flex;
+  justify-content: center;
+
+}
+
+.option-list {
+  display:grid;
+  justify-content: center;
 }
 
 
