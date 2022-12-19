@@ -10,6 +10,7 @@
 
   <header>
     <section>
+      <!-- code block for top nav links for High Score and Timer -->
       <nav class="navlinks">
         <a href=""><h3>High Scores</h3></a>
         <h3>Timer:</h3> 
@@ -18,22 +19,40 @@
   </header>
   <body>
 
+    <!-- quiz header -->
     <h1 class="container">Code Quiz</h1>
 
+    <!-- quiz container -->
     <section>
       <article>
+
+        <!-- quiz question -->
         <h3 class="container" id="question" >Question goes here</h3>
+
+        <!-- quiz answers/options-->
         <section type="a" class="option-list">
           <button class="option" onclick="" id="option1">Option 1</button>
           <button class="option" onclick="" id="option2">Option 2</button>
           <button class="option" onclick="" id="option3">Option 3</button>
           <button class="option" onclick="" id="option4">Option 4</button>  
         </section>
-        <section id="a1">
-          <p>Answer: A</p>
-          <p>Explanation: JavaScript is a scripting language used along with HTML and CSS to make the website interactive along. It is used both on the client-side and server-side.</p>
-      </section>
+
+        <br>
+
+        <div class="result"></div>
+
+        <br>
+
+        <section class="explanation"></section>
       </article>
+
+      <br>
+
+      <nav class="nextquestion">
+        <button class="check">Check Answer</button>
+        <button class="next">Next Question</button>
+      </nav>
     </section>
+    <script src="./Assets/js/script.js"></script>
   </body>
 </html>
