@@ -3,7 +3,6 @@
   justify-content: space-between;
 }
 
-
 .container,
 .nextquestion {
   display: flex;
@@ -18,15 +17,24 @@
 
 .nextquestion {
   align-content: center;
-  justify-content: space-around;
+  
 }
 
-.result,
-.explanation {
+.result {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+}
+
+.explanation {
   width: 400px;
   height: auto;
-  outline: dashed 1px black;
+}
+
+.check {
+  margin-right: 25px;
+}
+
+.next {
+  margin-left: 25px;
 }

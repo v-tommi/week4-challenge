@@ -62,9 +62,6 @@ const Questions = [
 var start = true;
 
 function flow(id) {
-  var result = document.getElementsByClassName("result");
-  result[0].innerText = "";
-
   var explanation = document.getElementsByClassName("explanation");
   explanation[0].innerText = "";
 
@@ -129,13 +126,11 @@ const check = document.getElementsByClassName("check");
 
 check[0].addEventListener("click", () => {
   if (selected = true) {
-    result[0].innerHTML = "Correct";
-    explanation[0].innerHTML = Questions[id].e
-    result[0].style.color = "green";
+    explanation[0].innerHTML = "Correct! " + Questions[id].e;
+    explanation[0].style.color = "green";
   } else {
-    result[0].innerHTML = "Incorrect";
-    explanation[0].innerHTML = Questions[id].e
-    result[0].style.color = "red";
+    explanation[0].innerHTML = "Incorrect! " + Questions[id].e;
+    explanation[0].style.color = "red";
   }
 })
 }
