@@ -13,7 +13,11 @@
       <!-- code block for top nav links for High Score and Timer -->
       <nav class="navlinks">
         <a href=""><h3>High Scores</h3></a>
-        <h3>Timer:</h3> 
+        <section class="timer">
+          <h3>Timer: </h3> 
+          <h3 class="counter">240</h3> 
+        </section>
+
       </nav>
     </section>
   </header>
@@ -26,10 +30,10 @@
     <section>
       <article>
 
-        <!-- quiz question -->
+        <!-- creating section to display quiz questions -->
         <h3 class="container" id="question" >Question goes here</h3>
 
-        <!-- quiz answers/options-->
+        <!-- creating section to display quiz answers/options -->
         <section type="a" class="option-list">
           <button class="option" onclick="" id="option1">Option 1</button>
           <button class="option" onclick="" id="option2">Option 2</button>
@@ -39,12 +43,13 @@
       </article>
 
       <br>
+      <!-- creating section to display quiz answers/options explanation -->
       <section class="result">
         <section class="explanation"></section>
       </section>
 
       <br>
-
+      <!-- Next question button -->
       <nav class="nextquestion">
         <button class="check">Check Answer</button>
         <button class="next">Next Question</button>
