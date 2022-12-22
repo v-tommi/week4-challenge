@@ -7,7 +7,18 @@
   display: inline-flex;
 }
 
-.container,
+.start-container button {
+  position: relative;
+  width: 200px;
+  left:  200px;
+  border-style: dashed;
+}
+
+.quiz-container {
+  display: none;
+}
+
+.formatting,
 .nextquestion {
   display: flex;
   justify-content: center;
