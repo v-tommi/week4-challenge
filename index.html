@@ -15,7 +15,7 @@
         <a href=""><h3>High Scores</h3></a>
         <section class="timer">
           <h3>Timer: </h3> 
-          <h3 class="counter">240</h3> 
+          <h3 class="counter">300</h3> 
         </section>
 
       </nav>
@@ -24,14 +24,26 @@
   <body>
 
     <!-- quiz header -->
-    <h1 class="container">Code Quiz</h1>
+    <h1 class="formatting">Code Quiz</h1>
 
     <!-- quiz container -->
     <section>
-      <article>
+      
+      <!-- creating start prompt container -->
+      <article class="start-container">
+        <h3 class="formatting">Click Start to Begin</h3>
+        <h4  class="formatting">By clicking Start, you will have 5 minutes to complete the quiz.</h4>
+
+        <br>
+
+        <button class="start">Start</button>
+      </article>
+
+      <!-- creating quiz container -->
+      <article class="quiz-container">
 
         <!-- creating section to display quiz questions -->
-        <h3 class="container" id="question" >Question goes here</h3>
+        <h3  class="formatting" id="question" >Question goes here</h3>
 
         <!-- creating section to display quiz answers/options -->
         <section type="a" class="option-list">
@@ -40,21 +52,24 @@
           <button class="option" onclick="" id="option3">Option 3</button>
           <button class="option" onclick="" id="option4">Option 4</button>  
         </section>
+
+        <br>
+        <!-- creating section to display quiz answers/options explanation -->
+        <section class="result">
+          <section class="explanation"></section>
+        </section>
+  
+        <br>
+        <!-- Next question button -->
+        <nav class="nextquestion">
+          <button class="check">Check Answer</button>
+          <button class="next">Next Question</button>
+        </nav>
+
       </article>
-
-      <br>
-      <!-- creating section to display quiz answers/options explanation -->
-      <section class="result">
-        <section class="explanation"></section>
-      </section>
-
-      <br>
-      <!-- Next question button -->
-      <nav class="nextquestion">
-        <button class="check">Check Answer</button>
-        <button class="next">Next Question</button>
-      </nav>
     </section>
+
+    
     <script src="./Assets/js/script.js"></script>
   </body>
 </html>
